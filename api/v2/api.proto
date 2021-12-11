@@ -62,6 +62,7 @@ message Password {
   bytes hash = 2;
   string username = 3;
   string user_id = 4;
+  repeated string groups = 5;
 }
 
 // CreatePasswordReq is a request to make a password.

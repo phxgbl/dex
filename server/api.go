@@ -157,6 +157,7 @@ func (d dexAPI) CreatePassword(ctx context.Context, req *api.CreatePasswordReq) 
 		Hash:     req.Password.Hash,
 		Username: req.Password.Username,
 		UserID:   req.Password.UserId,
+		Groups:   req.Password.Groups,
 	}
 	if err := d.s.CreatePassword(p); err != nil {
 		if err == storage.ErrAlreadyExists {
@@ -173,9 +174,9 @@ func (d dexAPI) UpdatePassword(ctx context.Context, req *api.UpdatePasswordReq) 
 	if req.Email == "" {
 		return nil, errors.New("no email supplied")
 	}
-	if req.NewHash == nil && req.NewUsername == "" {
-		return nil, errors.New("nothing to update")
-	}
+	// if req.NewHash == nil && req.NewUsername == "" {
+	// 	return nil, errors.New("nothing to update")
+	// }
 
 	if req.NewHash != nil {
 		if err := checkCost(req.NewHash); err != nil {

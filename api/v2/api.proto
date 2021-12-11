@@ -81,6 +81,7 @@ message UpdatePasswordReq {
   string email = 1;
   bytes new_hash = 2;
   string new_username = 3;
+  repeated string new_groups = 5;
 }
 
 // UpdatePasswordResp returns the response from modifying an existing password.

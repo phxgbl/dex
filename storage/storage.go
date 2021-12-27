@@ -346,7 +346,7 @@ type Password struct {
 	UserID string `json:"userID"`
 
 	//Groups in which user is a member of.
-	Groups []string `json:"Groups"`
+	Groups []string `json:"groups"`
 }
 
 // Connector is an object that contains the metadata about connectors used to login to Dex.

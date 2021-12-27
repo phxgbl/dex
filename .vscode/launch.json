@@ -12,7 +12,7 @@
             "program": "${workspaceFolder}/cmd/dex",
             "args": [
                 "serve",
-                "${workspaceFolder}/config.dev.yaml"
+                "${workspaceFolder}/examples/grpc-client/config.yaml"
             ],
             "cwd": "${workspaceFolder}"
         }
